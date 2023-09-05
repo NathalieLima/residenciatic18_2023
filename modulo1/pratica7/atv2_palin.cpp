@@ -11,13 +11,13 @@ int main()
     int number_revert = 0;
 
     // entrada de dados
-    cout << "Digite um numero inteiro: ";
+    cout << "Digite um número inteiro: ";
     cin >> number;
 
     // converter entrada para string
     str = to_string(number);
 
-    // Reverse str[begin..end]
+    // uso da função reverse()
     reverse(str.begin(), str.end());
 
     // converter string revertida para inteiro
