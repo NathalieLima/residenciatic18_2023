@@ -17,7 +17,7 @@ int main()
     // converter entrada para string
     str = to_string(number);
 
-    // Reverse str[begin..end]
+    // uso da função reverse()
     reverse(str.begin(), str.end());
 
     // converter string revertida para inteiro
