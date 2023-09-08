@@ -6,6 +6,7 @@ dígitos. Por exemplo, 153 é um número armstrong porque 1³ + 5³ + 3³ = 153.
 */
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -13,11 +14,10 @@ int main (void)
 {
     int number = 0;
 
-    int notas = {}
-
-    // entrada de dados
     cout << "Digite um numero inteiro: ";
     cin >> number;
+
+    
 
     return 0;
 }

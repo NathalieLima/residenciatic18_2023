@@ -21,9 +21,6 @@ int main (void)
     cout << number << endl;
     int user_number = 0;
 
-    
-
-
     do {
         cout << "Qual é o seu número? ";
         cin >> user_number;
