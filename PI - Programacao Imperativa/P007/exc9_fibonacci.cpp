@@ -13,7 +13,7 @@ int main(void)
     int a = 0, b = 1;
     
     
-    cout << "Entre com um número: ";
+    cout << "Entre com um numero: ";
     cin >> num;
     
     cout << "A sequência de Fibonacci até " << num << " é:";
