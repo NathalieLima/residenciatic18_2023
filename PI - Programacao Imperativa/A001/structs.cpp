@@ -18,7 +18,8 @@ struct Passageiro {
 
 struct Roteiro {
     int codigo;
-    int data_hora_prevista;
+    string data_prevista;
+    int hora_prevista;
     int duracao_prevista;
     string origem;
     string destino;

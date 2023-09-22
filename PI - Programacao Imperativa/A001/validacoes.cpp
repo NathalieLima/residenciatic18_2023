@@ -1,11 +1,9 @@
 #include <string>
+#include <ctime>
 
 using namespace std;
 
-/* PROTÓTIPOS DAS FUNÇÕES */
-
 /* FUNÇÕES */
-
 
 bool validarCPF(string cpf)
 {
@@ -20,17 +18,6 @@ bool validarCPF(string cpf)
     //verificar se possui 11 caracteres
     return cpf.length() != 11 ? false : true;
 }
-
-bool validarNumero (int numero)
-{
-    return isdigit(numero);
-}
-
-bool validarCampo (string texto) {
-    return texto.empty();
-}
-
-
 
 bool validarData (int dia, int mes, int ano) {
     if (ano < 1900 || ano > 2100) { return false; }
@@ -51,21 +38,8 @@ bool validarData (int dia, int mes, int ano) {
     return true;
 }
 
-bool validarData(struct Data data) {
+bool validarData(Data data) {
     return validarData(data.dia, data.mes, data.ano);
-}
-
-void alterarData(struct Data *data, int dia, int mes, int ano) {
-    if(validarData(dia, mes, ano)) {
-        data->dia = dia;
-        data->mes = mes;
-        data->ano = ano;
-    }
-    else {
-        data->dia = 1;
-        data->mes = 1;
-        data->ano = 1900;
-    }
 }
 
 string transformarStringZeros(int numero) {
@@ -87,10 +61,14 @@ string transformarDataParaString(struct Data data)
     return dia+"/"+mes+"/"+ano;
 }
 
-bool verificarMaioridade(Data data_nascimento) {
-    int dia_atual = 12;
-    int mes_atual = 12;
-    int ano_atual = 2023;
+bool verificarMaioridade(Data data_nascimento) 
+{
+    time_t agora = std::time(nullptr);
+    tm* data_hora = std::localtime(&agora);
+
+    int dia_atual = data_hora->tm_mday;
+    int mes_atual = data_hora->tm_mon + 1;
+    int ano_atual = data_hora->tm_year + 1900;
 
     int idade = ano_atual - data_nascimento.ano;
     int maioridade = false;
