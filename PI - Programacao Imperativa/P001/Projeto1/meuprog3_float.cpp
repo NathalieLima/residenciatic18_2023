@@ -1,3 +1,5 @@
+// Exercício 6: Transforme o programa do exercício 4 para trabalhar com números do tipo float.
+
 #include <iostream>
 
 using namespace std;
