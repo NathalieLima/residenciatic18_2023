@@ -12,3 +12,13 @@ possibilitar obter as seguintes informações:
 determinada viagem.
 4. Qual o horário de viagem mais rentável.
 5. Qual a média de idade dos passageiros. 
+
+
+Crie um tipo estruturado (struct) empregado para armazenar dados (nome,
+sobrenome, ano de nascimento, RG, ano de admissão, salário) de empregados de
+uma empresa. Defina um vetor de empregados para armazenar até 50 empregados.
+Faça uma função chamada “Reajusta_dez_porcento( )” que receba por parâmetro o
+vetor de empregados e a quantidade de elementos no vetor e atualize o salário de
+cada empregado em 10%. Crie uma função main para testar a função.
+
+
