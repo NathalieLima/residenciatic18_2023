@@ -7,3 +7,9 @@ http://www3.decom.ufop.br/toffolo/media/uploads/2020-1/bcc201/08_funcoes.pdf
 https://www.inf.ufpr.br/ci208/NotasAula.pdf
 
 livro do deitel
+
+https://pgon.dev/blog/posts/building-map-filter-and-reduce-in-c-with-templates-and-iterators/
+
+https://stackoverflow.com/questions/40901615/how-to-replicate-map-filter-and-reduce-behaviors-in-c-using-stl
+
+c++ split
