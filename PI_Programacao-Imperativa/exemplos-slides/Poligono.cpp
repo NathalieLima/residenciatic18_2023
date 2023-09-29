@@ -1,5 +1,7 @@
 /* 
 Resolução de problemas nas classes Ponto e Poligono
+add p1 = p2
+add p1 == p2
 */
 
 #include <iostream>
