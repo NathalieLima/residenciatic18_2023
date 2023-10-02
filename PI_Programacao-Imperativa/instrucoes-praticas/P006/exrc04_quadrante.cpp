@@ -1,8 +1,25 @@
-/*
-Escreva um programa que leia os valores (x, y) de um ponto do plano e
+/* Escreva um programa que leia os valores (x, y) de um ponto do plano e
 informe em qual quadrante o ponto se encontra. Use apenas o operador
-condicional (?). Lembre que um ponto, no plano cartesiano, pode estar no
-primeiro quadrante ( se x> 0 e y>0), no segundo quadrante ( se x<0 e y>0),
-no terceiro quadrante ( se x<0 e y<0), no quarto quadrante (se x>0 e y<0) ou
-sobre um dos eixos (caso x=0 ou y=0).
-*/
+condicional (?). */
+
+#include <iostream>
+
+using namespace std;
+
+int main (void) 
+{
+    double x, y;
+
+    cout << "Valores do ponto: ";
+    cin >> x >> y;
+
+    string posicao = ( (x > 0 && y > 0) ? "no primeiro quadrante" : 
+                       (x < 0 && y > 0) ? "no segundo quadrante" : 
+                       (x < 0 && y < 0) ? "no terceiro quadrante" : 
+                       (x > 0 && y < 0) ? "no quarto quadrante" : 
+                       "sobre um dos eixos" );
+
+    cout << "O ponto se encontra " << posicao << " do plano cartesiano.";
+
+    return 0;
+}

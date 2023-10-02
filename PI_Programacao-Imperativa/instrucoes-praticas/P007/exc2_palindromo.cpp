@@ -1,14 +1,18 @@
+/* Escreva um programa em C++ que leia um número inteiro e verifique se ele é um
+palíndromo. Um número é palíndromo se ele permanece o mesmo quando seus
+dígitos são invertidos. */
+
 #include <iostream>
-#include <algorithm> //bits/stdc++.h
+#include <algorithm> // bits/stdc++.h
 #include <string>
 
 using namespace std;
 
 int main()
 {
-    string str = "\0";
+    string str = "";
     int number = 0;
-    int number_revert = 0;
+    int reversed_number = 0;
 
     // entrada de dados
     cout << "Digite um numero inteiro: ";
@@ -21,9 +25,9 @@ int main()
     reverse(str.begin(), str.end());
 
     // converter string revertida para inteiro
-    number_revert = stoi(str);
+    reversed_number = stoi(str);
     
-    cout << number << (number != number_revert ? " não é" : " é") << " um número palíndromo." << endl;
+    cout << number << (number != reversed_number ? " não é" : " é") << " um número palíndromo." << endl;
 
  
     return 0;

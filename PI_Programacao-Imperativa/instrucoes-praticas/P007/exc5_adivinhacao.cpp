@@ -1,10 +1,7 @@
-/* 
-Atividades
-● Escreva um programa em C++ que simule um jogo de adivinhação. O
+/* Escreva um programa em C++ que simule um jogo de adivinhação. O
 programa deve gerar um número aleatório entre 1 e 100, e o usuário deve
 tentar adivinhar esse número. O jogo deve informar se o palpite está alto,
-baixo ou correto, e continuar até que o usuário acerte o número.
-*/
+baixo ou correto, e continuar até que o usuário acerte o número. */
 
 #include <iostream>
 #include <cstdlib>
@@ -18,7 +15,6 @@ int main (void)
     srand(time(0));
 
     int number = rand() % 100;
-    cout << number << endl;
     int user_number = 0;
 
     do {
@@ -36,7 +32,7 @@ int main (void)
     } 
     while (user_number != number);
 
-    cout << "Parabéns, você acertou!";
+    cout << "\nParabéns, você acertou!";
 
 
     return 0;
