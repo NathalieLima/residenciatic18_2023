@@ -2,6 +2,8 @@
 #include <string>
 #include <cstdlib>
 #include <time.h>
+#include <cctype>
+#include <algorithm>
 
 using namespace std;
 
@@ -9,22 +11,29 @@ int main (void)
 {
     srand(time(0));
     
-    string array[10];
+    string strings[10] = {};
 
-    for (int i = 0; i < 10; i++) {
-        int j = 0;
-        while ( j < 10 )
+    // a. gerar 10 strings aleatoriamente com 10 caracteres
+    cout << "10 STRINGS ANTES" << endl;
+
+    for (int i = 0; i < 10; i++) 
+    {
+        for (int j = 0; j < 10; j++) 
         {
-            array[i] += 'a' + rand()%('z' - 'a');
-            j++;
+            strings[i] += 'a' + rand()%('z' - 'a');
         }
-        cout << array[i] << endl;
-    }
-    cout << "---------" << endl;
 
-    for (int i = 0; i < 10; i++) {
-        array[i][0] = toupper(array[i][0]);
-        cout << array[i] << endl; 
+        cout << strings[i] << " ";
+    }
+
+    // b. transformar primeiro caractere em maiúscula
+    cout << "\n\n10 STRINGS DEPOIS" << endl;
+
+    for (int i = 0; i < 10; i++) 
+    {
+        strings[i][0] = toupper(strings[i][0]);
+
+        cout << strings[i] << " ";
     }
 
 

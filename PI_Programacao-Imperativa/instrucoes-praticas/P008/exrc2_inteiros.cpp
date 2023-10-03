@@ -1,14 +1,3 @@
-/*
-A seguinte expressão em C++ gera um valor inteiro aleatório entre 1 e 20: 1
-+ rand()%20. Utilizando esta expressão desenvolva uma aplicação que:
-a. Preencha um array com 100 elementos de tipo int, com valores
-aleatoriamente gerados entre 1 e 20;
-b. Utilize um array de 20 posições para determinar quantas vezes se
-repete cada um dos possíveis valores gerados no array;
-c. Determine qual ou quais os números que mais vezes aparecem no
-array;
-*/
-
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
@@ -24,12 +13,16 @@ int main ()
 
     srand(time(0)); 
 
+    // a. preencher array com 100 valores aleatórios entre 1 e 20
     for (int number: random_numbers) 
     {
         number = 1 + rand() % 20;
+
+        // b. utilizar array com 20 posições para determinar quantidade de repetições dos valores
         repeated_numbers[number] += 1;
     }
 
+    // c. determinar qual ou quais os números que mais vezes aparecem no array
     max_number = *max_element(begin(repeated_numbers), end(repeated_numbers));
 
     cout << "O(s) número(s) que aparece(m) mais vezes é(são): " << endl;
@@ -38,7 +31,6 @@ int main ()
     {
         if (repeated_numbers[i] == max_number) 
         {
-            //cout << "O número " << i << " é repetido " << repeated_numbers[i] << " vezes.";
             cout << i << " ";
         }
     }

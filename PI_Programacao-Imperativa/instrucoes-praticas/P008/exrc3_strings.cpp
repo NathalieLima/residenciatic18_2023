@@ -14,26 +14,25 @@ int main (void)
     string texto1 = "";
     string texto2 = "";
 
-    for (int i = 0; i < 10; i++) {
+    // a. gerar duas strings aleatoriamente com 10 caracteres
+    for (int i = 0; i < 10; i++) 
+    {
         texto1 += 'a' + rand()%('z' - 'a');
         texto2 += 'a' + rand()%('z' - 'a');
     }
 
+    // b. transformar primeiro caractere em maiúscula
     texto1[0] = toupper(texto1[0]);
     texto2[0] = toupper(texto2[0]);
-    char primeira = int('a') - 1;
 
-    for ( unsigned int i = 0; i < texto1.length(); i++ ) {
-        if ( texto1[i] > primeira ) {
-            cout << "ola";
-            cout << texto1[i];
-            primeira = texto1[i];
-        }
-    }
+    cout << texto1 << "\n" << texto2 << "\n\n";
 
-    cout << sort(texto1, texto1.length());
+    // c. imrpimir as strings em ordem alfabética
+    sort(texto1.begin(), texto1.end());
+    sort(texto2.begin(), texto2.end());
 
-    cout << texto1 << " " << texto2;
+    cout << texto1 << "\n" << texto2;
+
 
     return 0;
 }
