@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cstdlib>
 #include <time.h>
 
@@ -13,7 +14,6 @@ int main (void)
     for (unsigned int i = 0; i < 15; i++) 
     {
         cout << "------" << endl << "ALUNO " << (i + 1) << endl;
-        //
 
         // a. simular notas numa avaliação; guardar em array
         primeiras_notas[i] =  ((float)rand()/RAND_MAX)*10;
@@ -21,7 +21,9 @@ int main (void)
         // b. simular notas numa segunda avaliação; guardar em array
         segundas_notas[i] = ((float)rand()/RAND_MAX)*10;
 
-        cout << "Primeira nota: " << primeiras_notas[i] << " | Segunda nota: " << segundas_notas[i] << endl;
+        cout << fixed << setprecision(2); // fixar quantidade de casas decimais
+
+        cout << "Primeira nota: "  << primeiras_notas[i] << " | Segunda nota: " << segundas_notas[i] << endl;
 
         // c. comparar notas e fazer avaliação
         cout << "Portanto, " << ( primeiras_notas[i] > segundas_notas[i] ? "piorou." : (primeiras_notas[i] < segundas_notas[i] ? "melhorou!" : "manteve a nota.") ) << endl;
