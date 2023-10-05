@@ -1,0 +1,10 @@
+john,john@gmail,22,33
+nath,nath@gmail,88,99
+Marta,marta@hotmail,77,88
+carlinhos,carlos@uol,90,65
+nolan,nlan@gmail,55,87
+karlit,karlit@hotmail,12,34john,john@gmail,22,33
+nath,nath@gmail,88,99
+Marta,marta@hotmail,77,88
+carlinhos,carlos@uol,90,65
+karlit,karlit@hotmail,12,34

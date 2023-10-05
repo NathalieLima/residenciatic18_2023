@@ -13,3 +13,5 @@ https://pgon.dev/blog/posts/building-map-filter-and-reduce-in-c-with-templates-a
 https://stackoverflow.com/questions/40901615/how-to-replicate-map-filter-and-reduce-behaviors-in-c-using-stl
 
 c++ split
+
+https://moodle.ufsc.br/pluginfile.php/2377820/mod_resource/content/0/exercisios%20arquivos.pdf
