@@ -14,11 +14,9 @@ int calcularFatorial(int numero)
 {
     int fatorial = 1;
 
-    for (int i = numero; i != 0; i--)
-    {
+    for (int i = numero; i != 0; i--) {
         fatorial *= i;
     }
 
     return fatorial;
 }
-

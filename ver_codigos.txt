@@ -1,0 +1,9 @@
+P013
+exc3.cpp
+
+funcao pegarIndice
+//ver onde eu colocaria verificaçao de existencia
+
+contarqtdProdutos
+// ver sobre isso: se funcoes q retornam só isso n pode usar direto a funcao padrao
+// se ela especificamente eh desne, pq nas outras usei produtos.size

@@ -11,6 +11,7 @@ int main (void)
 
     multiplica_por_n(vetor, qtde, 10);
 
+    
     return 0;
 }
 
