@@ -6,7 +6,8 @@ using namespace std;
 
 int main (void) 
 {
+    vector<string> str;
+    new vector<string> str;
 
 
-    return 0;
 }

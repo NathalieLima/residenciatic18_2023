@@ -12,7 +12,9 @@ using namespace std;
 class Data 
 {
     private:
-        int dia, mes, ano;
+        int dia, 
+            mes, 
+            ano;
         string formato;
 
     public:

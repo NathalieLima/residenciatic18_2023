@@ -8,3 +8,4 @@ nath,nath@gmail,88,99
 Marta,marta@hotmail,77,88
 carlinhos,carlos@uol,90,65
 karlit,karlit@hotmail,12,34
+Náthalie LIma,nathali@gmail,100,50
