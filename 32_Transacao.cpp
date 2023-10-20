@@ -60,7 +60,13 @@ class Conta
 
         //virtual double set
 
-        void depositar(double _valor) {
+        void depositar(string _data, double _valor) 
+        {
+            Transacao transacao;
+            transacao.setData(_data);
+            transacao.setValorTransacao(_valor);
+            transacao.setDescricao("Crédito");
+
             this->saldo += _valor;
         };
 
@@ -71,7 +77,6 @@ class Conta
         string getNumConta() {
             return this->num_conta; 
         }
-
 
         void setNome(string _nome) {
             this->nome = _nome; 
@@ -120,16 +125,18 @@ void exibirOpcoesMenu()
 
 }
 
+void montarMenu(vector<string>, unsigned int);
+
 int main (void)
 {
     int opcao_usuario;
     Conta conta;
     Transacao transacao;
     string nome;
-
+    vector<string> opcoes {"Criar conta", "Exibir dados da conta", "Depósito", "Retirada"};
 
     do {
-        exibirOpcoesMenu();
+        montarMenu(opcoes, opcoes.size());
         cout << "Opção: "; cin >> opcao_usuario;
 
         switch (opcao_usuario)
@@ -146,6 +153,7 @@ int main (void)
                 cout << "Número da conta: " << conta.getNumConta() << setw(16)
                     << "Nome da conta: " << conta.getNome() << setw(16)
                     << "Número da conta: " << conta.getNumConta() << setw(16);
+                break;
 
             default:
                 cout << "Aviso: Insira entre 1 e 8" << endl;
@@ -157,6 +165,13 @@ int main (void)
     } while (opcao_usuario != 0);
 }
 
+void montarMenu(vector<string> opcoes, unsigned int qtde)
+{
+    for (unsigned int i = 0; i < qtde; i++) {
+        cout << "[" << i+1 << "] " << opcoes[i] << "\n";
+    }
+    cout << endl;
+}
 
 
 
