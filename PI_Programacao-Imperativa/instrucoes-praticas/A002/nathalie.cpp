@@ -4,8 +4,6 @@
 #include <climits>
 #include <cctype>
 
-#include "extra.cpp"
-
 using namespace std;
 
 template<typename T> void getValorMaximo(vector<T> elementos, T &maximo) 
@@ -32,32 +30,28 @@ template<typename T> void getValorMinimo(vector<T> elementos, T &minimo)
     minimo = min;
 }
 
-string getMenorString(vector<string> elementos)
+bool isTextoValido(std::string _nome, int _limite)
 {
-    string menor = elementos[0];
-
-    for (unsigned int i = 1; i < elementos.size(); i++)
-    {
-        if ( elementos[i].length() < menor.length() ) {
-            menor = elementos[i];
-        }
+    if (_nome.empty() || (_nome.length() > _limite && _limite != 0)) {
+        return false;
     }
 
-    return menor;
+    return true;
 }
 
-string getMaiorString(vector<string> elementos)
+bool isPar(int _numero)
 {
-    string maior = "";
+    return _numero % 2 == 0;
+}
 
-    for (unsigned int i = 0; i < elementos.size(); i++)
-    {
-        if ( elementos[i].length() > maior.length() ) {
-            maior = elementos[i];
-        }
-    }
+bool isImpar(int _numero)
+{
+    return _numero % 3 == 0;
+}
 
-    return maior;
+bool isNumeroValido(int numero) 
+{
+    return isPar(numero) || isImpar(numero) || numero == 1;
 }
 
 class Data {
@@ -65,9 +59,9 @@ class Data {
 	public:
 	
 	/*
-	O m�todo abaixo retornar� -1 se d1 � anterior a d2
-	Retornar� 0 se d1 = d2
-	Retornar� +1 se d1 � posterior a d2
+	O método abaixo retornará -1 se d1 � anterior a d2
+	Retornará 0 se d1 = d2
+	Retornará +1 se d1 � posterior a d2
 	*/	
 	static int compara(Data d1, Data d2) { 
 		return 0;
@@ -89,12 +83,8 @@ class Data {
 	}
 };
 
-template<class T>class Lista {
-    private:
-    
-    vector< vector<T> > lista_de_listas;
- 
-
+class Lista 
+{
 	public:
 	virtual void entradaDeDados() =0;
 	virtual void mostraMediana() =0;
@@ -102,17 +92,15 @@ template<class T>class Lista {
 	virtual void mostraMaior() =0;
 };
 
-
-
 class ListaNomes {
 	vector<string> lista;
 	
 	public:
 	
 	/*
-	O m�todo abaixo pergunta ao usu�rios quantos
-	elementos v�o existir na lista e depois
-	solicita a digita��o de cada um deles
+	O método abaixo pergunta ao usu�rios quantos
+	elementos vão existir na lista e depois
+	solicita a digitação de cada um deles
 	*/	
 	void entradaDeDados() 
     {
@@ -176,14 +164,14 @@ class ListaNomes {
 	
 	void mostraMenor() 
     {
-        string menor = getMenorString(lista);
+        string menor;
 
 		cout << "O primeiro nome alfabeticamente é: " << menor << endl;
 	}
 
 	void mostraMaior() 
     {
-        string maior = getMaiorString(lista);
+        string maior;
         
 		cout << "O último nome alfabeticamente é: " << maior << endl;
 	}
@@ -302,8 +290,35 @@ class ListaIdades  {
 	elementos v�o existir na lista e depois
 	solicita a digita��o de cada um deles
 	*/	
-	void entradaDeDados() {
-		
+	void entradaDeDados() 
+    {
+        int elemento;
+        int qtde;
+        bool flag;
+        
+        do 
+        {
+            // solicitar quantidade de elementos
+            cout << "Quantos elementos vão existir na lista? "; cin >> qtde;
+
+            // verificar se o número fornecido é válido, isto é, acima de 0
+            flag = isNumeroValido(qtde);
+
+            if (!flag) 
+            {
+                cout << "Aviso: Entre com um número a partir de 1." << endl;
+            }
+        } 
+        while (!flag);
+        
+		// solicitar cada elemento
+        for (int i = 0; i < qtde; i++) 
+        {
+            cout << "Elemento " + to_string(i + 1) + ": "; cin >> elemento;
+            //-colocar validacao
+
+            lista.push_back(elemento);
+        }
 	}
 
     void mostraMediana() 

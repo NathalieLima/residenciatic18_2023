@@ -5,4 +5,4 @@ Este repositório é referente à residência em Tecnologia da Informação 18, 
 ### PI_Programacao-Imperativa
 
 Primeiro módulo.
-Ago/2023 ~~ 
+Ago/2023 ~~ Out/2023
