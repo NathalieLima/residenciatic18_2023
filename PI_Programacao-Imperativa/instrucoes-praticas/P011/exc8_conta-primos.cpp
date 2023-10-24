@@ -45,8 +45,6 @@ int conta_primos(int *vet, int qtde)
                 cout << numero << " ";
                 soma++;
             }
-            
-            
         }
     }
 

@@ -4,7 +4,8 @@
 class Ponto
 {
     private:
-        double x, y;
+        double x, 
+               y;
 
     public:
         Ponto() {
@@ -12,8 +13,7 @@ class Ponto
             this->y = 0.0;
         }
 
-        Ponto(double _x, double _y)
-        {
+        Ponto(double _x, double _y) {
             this->x = _x;
             this->y = _y;
         }
@@ -32,7 +32,11 @@ class Ponto
         }
 
         double calcularDistancia() {
-            return sqrt( pow( this->x - 0.0, 2.0) + pow( this->y - 0.0, 2.0) );
+            return sqrt( 
+                pow( (this->x - 0.0), 2.0 ) 
+                + 
+                pow( (this->y - 0.0), 2.0 ) 
+            );
         }
 };
 
@@ -51,6 +55,23 @@ int main(void)
     Ponto p4(4, 0);
 	double distancia_p3 = p3.calcularDistancia();
 	double distancia_p4 = p4.calcularDistancia();
+    std::cout << "A distância do ponto (" << p3.getX() << ", " << p3.getY() << ") até a origem é " << distancia_p3 << 
+                  " e do ponto (" << p4.getX() << ", " << p4.getY() << ") até a origem é " << distancia_p4 << std::endl;
+
+    Ponto pontos[3];
+    pontos[0].setCoordenadas(2, 2);
+    pontos[1].setCoordenadas(-1, 5);
+    pontos[2].setCoordenadas(0, 0);
+
+    for (int i = 0; i < 3; i++) {
+        double distancia = pontos[i].calcularDistancia();
+        std::cout << "Distância do ponto " << i + 1 << " até a origem: " << distancia << std::endl;
+    }
+
+    Ponto p5;
+    std::cout << "Coordenadas do ponto p5: (" << p5.getX() << ", " << p5.getY() << ")" << std::endl;
+    p5.setCoordenadas(8, -3);
+    std::cout << "Novas coordenadas do ponto p5: (" << p5.getX() << ", " << p5.getY() << ")" << std::endl;
 
 	
 	return 0;

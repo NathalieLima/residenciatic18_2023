@@ -4,6 +4,7 @@
 #include <vector>
 
 #define PRECO_PASSAGEM 80.00
+#define ANO_ATUAL 2023
 
 using namespace std;
 
@@ -89,6 +90,8 @@ int main ()
                 do {
                     cout << "ID da viagem (1-5): ";
                     cin >> id_viagem;
+
+                    flag = true;
                     indice_viagem = pegarIndiceViagem(viagens, id_viagem, ida_volta);
 
                     if (id_viagem < 1 || id_viagem > 5) {
@@ -103,7 +106,6 @@ int main ()
                 break;
 
             case 3:
-
                 do {
                     cout << "Insira o mês a ser analisado (1-12): ";
                     cin >> mes;
@@ -111,15 +113,15 @@ int main ()
                     flag = true;
 
                     if ( mes < 1 || mes > 12 ) {
+                        flag = false;
                         cout << "Aviso: Insira um valor entre 1 e 12." << endl;
                     }
                 } while (!flag);
 
-                cout << "Total arrecadado no mês " << to_string(mes) << " foi: " << calcularTotalMensalArrecadado(mes, viagens) << " reais." << endl;
+                cout << "O total arrecadado no mês " << to_string(mes) << " foi: " << calcularTotalMensalArrecadado(mes, viagens) << " reais." << endl;
                 break;
 
             case 4:
-
                 do {
                     cout << "Esta é uma viagem de ida (1) ou volta (2)? ";
                     cin >> ida_volta;
@@ -137,6 +139,7 @@ int main ()
                     cout << "ID da viagem (1-5): ";
                     cin >> id_viagem;
 
+                    flag = true;
                     indice_viagem = pegarIndiceViagem(viagens, id_viagem, ida_volta);
 
                     if (id_viagem < 1 || id_viagem > 5) {
@@ -195,7 +198,7 @@ void exibirOpcoesMenu()
     "1. Cadastrar passagem; \n" << 
     "2. Qual o total arrecadado para uma determinada viagem.; \n" <<
     "3. Qual o total arrecadado em um determinado mês; \n" <<
-    "4. Qual o nome do passageiro de uma determinada poltrona P de uma determinada viagem; \n" <<
+    "4. Qual o nome do passageiro de uma determinada poltrona de uma determinada viagem; \n" <<
     "5. Qual o horário de viagem mais rentável; \n" << 
     "6. Qual a média de idade dos passageiros; \n" <<
     "0. Sair do programa. \n" << endl;
@@ -246,6 +249,8 @@ void cadastrarPassagem(vector<Viagem> &viagens)
         cout << "ID da viagem (1-5): ";
         cin >> nova_viagem.id_viagem;
 
+        flag = true;
+
         if (nova_viagem.id_viagem < 1 || nova_viagem.id_viagem > 5) {
             flag = false;
             cout << "Aviso: Insira um valor entre 1 e 5." << endl;
@@ -265,6 +270,10 @@ void cadastrarPassagem(vector<Viagem> &viagens)
 
         separarNumeros(data_str, nova_passagem.data);
         flag = isDataValida(nova_passagem.data);
+
+        if (!flag) {
+            cout << "Aviso: Insira uma data válida." << endl;
+        }
     } while (!flag);
     
     cout << "Hora: ";
@@ -420,7 +429,7 @@ int pegarIndiceViagem(vector<Viagem> viagens, int id_viagem, int ida_volta)
 void separarNumeros(string data_str, Data &data)
 {
     istringstream iss(data_str);
-    string numeros_data[3] = {};
+    string numeros_data[3] = {"01", "01", to_string(ANO_ATUAL)};
     string substring;
     int i = 0;
     
@@ -470,7 +479,7 @@ bool isDataValida(Data data)
 {   
     int dia = data.dia, mes = data.mes, ano = data.ano;
 
-    if (ano >= 0 && mes >= 1 && mes <= 12) {
+    if (ano >= 0 && ano <= ANO_ATUAL && mes >= 1 && mes <= 12) {
         switch (mes) {
             case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                 return dia >= 1 && dia <= 31;

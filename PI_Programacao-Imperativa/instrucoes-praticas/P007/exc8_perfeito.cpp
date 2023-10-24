@@ -23,5 +23,6 @@ int main (void)
 
     cout << "O número " << number << (number == sum ? " é" : " não é") << " um número perfeito.";
 
+
     return 0;
 }
