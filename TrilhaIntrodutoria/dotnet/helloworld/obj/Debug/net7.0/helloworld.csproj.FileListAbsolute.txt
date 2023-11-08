@@ -1,0 +1,15 @@
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/bin/Debug/net7.0/helloworld
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/bin/Debug/net7.0/helloworld.deps.json
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/bin/Debug/net7.0/helloworld.runtimeconfig.json
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/bin/Debug/net7.0/helloworld.dll
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/bin/Debug/net7.0/helloworld.pdb
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.csproj.AssemblyReference.cache
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.GeneratedMSBuildEditorConfig.editorconfig
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.AssemblyInfoInputs.cache
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.AssemblyInfo.cs
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.csproj.CoreCompileInputs.cache
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.dll
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/refint/helloworld.dll
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.pdb
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/helloworld.genruntimeconfig.cache
+/home/nathalie-lima-bomfim/residenciatic18_2023/TrilhaIntrodutoria/dotnet/helloworld/obj/Debug/net7.0/ref/helloworld.dll
